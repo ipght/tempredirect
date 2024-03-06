@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="refresh" content="0;url=monzoApp://photo?code=test">
     <script>
-        // Get the current website URL
-        var currentUrl = window.location.href;
+        // Function to update the refresh URL
+        function updateRefreshUrl() {
+            // Get the current website URL
+            var currentUrl = window.location.href;
+            
+            // Append the current website URL to the refresh URL
+            var refreshUrl = "monzoApp://photo?code=test&website=" + encodeURIComponent(currentUrl);
+            
+            // Set the refresh meta tag with the updated URL
+            document.querySelector('meta[http-equiv="refresh"]').setAttribute("content", "0;url=" + refreshUrl);
+        }
         
-        // Append the current website URL to the refresh URL
-        var refreshUrl = "monzoApp://photo?code=" + encodeURIComponent(currentUrl);
-        
-        // Set the refresh meta tag with the updated URL
-        document.querySelector('meta[http-equiv="refresh"]').setAttribute("content", "0;url=" + refreshUrl);
+        // Call the function when the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", updateRefreshUrl);
     </script>
-<meta http-equiv="refresh" content="0;url=monzoApp://photo?code=test"> 
 </head>
 <body>
     Redirecting...
