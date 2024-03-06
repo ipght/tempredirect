@@ -9,7 +9,7 @@
             var currentUrl = window.location.href;
             
             // Append the current website URL to the refresh URL
-            var refreshUrl = "monzoApp://photo?code=" + encodeURIComponent(currentUrl);
+            var refreshUrl = "monzoApp://authentication?tokenurl=" + encodeURIComponent(currentUrl);
             
             // Set the refresh meta tag with the updated URL
             document.querySelector('meta[http-equiv="refresh"]').setAttribute("content", "0;url=" + refreshUrl);
