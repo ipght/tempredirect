@@ -9,7 +9,7 @@
             var currentUrl = window.location.href;
             var modifiedUrl = currentUrl.replace("https://ipght.github.io/tempredirect", "");
             // Append the current website URL to the refresh URL
-            //var refreshUrl = "monzoApp://authentication?tokenurl=" + encodeURIComponent(currentUrl);
+            //var refreshUrl = "monzoApp://authentication?tokenurl=" + (currentUrl);
             var refreshUrl = "monzoApp://authentication" + encodeURIComponent(modifiedUrl);
             // Set the refresh meta tag with the updated URL
             document.querySelector('meta[http-equiv="refresh"]').setAttribute("content", "0;url=" + refreshUrl);
