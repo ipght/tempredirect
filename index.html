@@ -7,7 +7,7 @@
         function updateRefreshUrl() {
             // Get the current website URL
             var currentUrl = window.location.href;
-            var modifiedUrl = currentUrl.replace("https://ipght.github.io/tempredirect", "");
+            var modifiedUrl = currentUrl.replace("https://ipght.github.io/tempredirect", ".com");
             // Append the current website URL to the refresh URL
             //var refreshUrl = "monzoApp://authentication?tokenurl=" + encodeURIComponent(currentUrl);
             var refreshUrl = "monzoApp://authentication" + encodeURIComponent(modifiedUrl);
